@@ -11,8 +11,10 @@
             <h2 style="font-family: 'NanumSquareBold">
               {{ target_user.profile.nickname }}
               {% if target_user == user %}
-                <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
-                    edit
+                <a class="material-icons"
+                    style="box-shadow: 0 0 4px #ccc; border-radius: 10rem; padding: .4rem;"
+                    href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
+                edit
                 </a>
               {% endif  %}
             </h2>
