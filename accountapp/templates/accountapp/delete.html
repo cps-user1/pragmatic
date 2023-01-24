@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 {% load bootstrap5 %}
+{% load static %}
 
 {% block content %}
 
     <div style="text-align: center; max-width: 500px; margin: 4rem auto;">
         <div>
-            <h4>Quit</h4>
+            <h4>탈퇴하기</h4>
+            <h6>고객님! 가입하신 계정을 삭제 처리 하시겠습니까? 삭제 후에는 복구가 불가능하기에 다시한번 신중하게 생각해주세요. 그래도 삭제를 하려면 제출 버튼을 클릭하면 됩니다.</h6>
+        </div>
+        <div>
+            <img src="{% static 'images/thinking.png' %}"
+                 style="text-align: center; max-width: 300px; margin: 2rem auto;">
         </div>
         <div>
             <form action="{% url 'accountapp:delete' pk=target_user.pk %}" method="post">
@@ -14,7 +20,7 @@
                 {% bootstrap_form form %}
                 <input type="submit" class="btn btn-danger rounded-pill col-6 mt-3">
             </form>
-        </div>5
+        </div>
     </div>
 
 {% endblock %}
