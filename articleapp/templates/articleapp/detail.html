@@ -16,7 +16,6 @@
         <p>
             {{ target_article.content }}
         </p>
-        <hr/>
         <a href="{% url 'articleapp:create' %}" class="btn bth-primary rounded-pill col-3">
             Create
         </a>
@@ -28,6 +27,14 @@
             Delete
         </a>
         {% endif %}
+
+        <hr/>
+
+        {% for comment in target_article.comment.all %}
+            {% include 'commentapp/detail.html' with comment=comment %}
+        {% endfor %}
+
+        {% include 'commentapp/create.html' with article=target_article %}
 
     </div>
 
