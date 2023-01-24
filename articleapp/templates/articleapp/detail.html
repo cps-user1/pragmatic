@@ -13,9 +13,9 @@
         </h5>
         <hr/>
         <img src="{{ target_article.image.url }}" alt="" style="width:100%; border-radius: 1rem; margin: 2rem 0">
-        <p>
-            {{ target_article.content }}
-        </p>
+        <div class="text-left mb-5">
+            {{ target_article.content | safe }}
+        </div>
         <a href="{% url 'articleapp:create' %}" class="btn btn-primary rounded-pill col-3">
             Create
         </a>
