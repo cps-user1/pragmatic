@@ -16,11 +16,11 @@
         <p>
             {{ target_article.content }}
         </p>
-        <a href="{% url 'articleapp:create' %}" class="btn bth-primary rounded-pill col-3">
+        <a href="{% url 'articleapp:create' %}" class="btn btn-primary rounded-pill col-3">
             Create
         </a>
         {% if target_article.writer == request.user %}
-        <a href="{% url 'articleapp:update' pk=target_article.pk %}" class="btn bth-primary rounded-pill col-3">
+        <a href="{% url 'articleapp:update' pk=target_article.pk %}" class="btn btn-primary rounded-pill col-3">
             Update
         </a>
         <a href="{% url 'articleapp:delete' pk=target_article.pk %}" class="btn btn-danger rounded-pill col-3">
