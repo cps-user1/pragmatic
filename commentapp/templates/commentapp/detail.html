@@ -1,7 +1,9 @@
 <div style="border: 1px solid; text-align:left; padding: 4%; margin: 1rem 0; border-color: gray; border-radius: 1rem; ">
-    <div>
-        <strong>
-        {{ comment.writer.profile.nickname }}
+    <div style="display: flex; align-items: center">
+        <img src="{{ comment.writer.profile.image.url }}" alt="profile"
+                 style="height: 2rem; width: 2rem; border-radius: 20rem; object-fit: cover; margin: 0 0.4rem 0 0">
+        <strong style="position: relative;">
+            {{ comment.writer.profile.nickname }}
         </strong>
         &nbsp;&nbsp;&nbsp;
         {{ comment.created_at }}
