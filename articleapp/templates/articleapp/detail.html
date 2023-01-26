@@ -8,6 +8,17 @@
         <h2>
             <strong>{{ target_article.title }}</strong>
         </h2>
+        <div style="height: 2rem">
+            <a href="{% url 'likeapp:article_like' pk=target_article.pk %}">
+            <i style="vertical-align: middle; font-size: 1.2rem; color: #f77"
+               class="material-icons">
+                favorite
+            </i>
+            </a>
+            <span style="vertical-align: middle; font-size: 1.2rem;">
+                {{ target_article.like }}
+            </span>
+        </div>
         <div>
             <img src="{{ target_article.writer.profile.image.url }}" alt="profile"
                  style="height: 3rem; width: 3rem; border-radius: 20rem; margin-bottom: 1rem; object-fit: cover;">
