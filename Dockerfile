@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo "django_pragmatic_image"
+RUN echo "django_pragmatic_image:5"
 
 RUN git clone https://github.com/cps-user1/pragmatic.git
 
